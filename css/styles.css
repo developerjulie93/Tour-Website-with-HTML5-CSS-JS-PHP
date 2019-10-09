@@ -289,15 +289,18 @@ h1{
 	height: 50%;
 	display:flex;
 	justify-content: space-around;
+	color: rgb(127,124,144);
 }
 .boat_explore{
 	width: 50%;
 	height: 50%;
 	margin-left: 50%;
+	margin-top: 40px;
+	color: rgb(127,124,144);
 }
 .section5{
 	width: 1500px;
-	height: 850px;
+	height: 750px;
 	background: url(../img/bgImg_5.png)
 	no-repeat center bottom;
 	background-size: 1500px 720px;
@@ -329,4 +332,9 @@ h1{
 	color: rgb(255,255,255);
 	text-align: center;
 	line-height: 50px;
+}
+.section6{
+	width: 1500px;
+	height: 80px;
+	background-color: rgb(58,54,51);
 }
