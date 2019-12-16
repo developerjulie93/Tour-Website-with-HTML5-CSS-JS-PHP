@@ -1,27 +1,33 @@
 <Client-Main>
-1. navigationÀ» ´©¸£¸é section2·Î ÀÌµ¿ÇÏ¿© 
+Section1 => Navigation, Reservation Search Form
+Section2 => Available Tours list
+Section3 => Book a Tour, More Info
+Section4 => Service More Info(Ticket, Boat, Explore)
+Section5 => Contact Us
+Section6 => Navigation with Social Media
+
+
+---------------------------------------------------------------------------------------------------------------
+
+1. navigationì„ ëˆ„ë¥´ë©´ section2ë¡œ ì´ë™í•˜ì—¬ 
    show "detail + book button" 
-2. Çü½Ä : info + duration + price
-   durationÀ» È­»ìÇ¥¸¦ ´­·¯ ¹Ù²Ù¸é °¡°İµµ °°ÀÌ ¹Ù²ñ
-3. book Å¬¸¯ÇÏ¸é "Client-Reservation"À¸·Î ³Ñ¾î°¨
-4. Get app »èÁ¦
-5. Contact us ´©¸£¸é section 5·Î ÀÌµ¿ÇÏ¿©
-   Manager¿¡ Àü´Ş
-   "Name + E-mail + Description"·Î ¹Ù²Ù±â
-6. °Ë»öÃ¢ -> "Tours + Date + Guests" ·Î ¹Ù²Ù±â
+2. í˜•ì‹ : info + duration + price
+   durationì„ í™”ì‚´í‘œë¥¼ ëˆŒëŸ¬ ë°”ê¾¸ë©´ ê°€ê²©ë„ ê°™ì´ ë°”ë€œ
+
+5. Contact us ëˆ„ë¥´ë©´ section 5ë¡œ ì´ë™í•˜ì—¬
+   Managerì— ì „ë‹¬
+   "Name + E-mail + Description"ë¡œ ë°”ê¾¸ê¸°
+6. ê²€ìƒ‰ì°½ -> "Tours + Date + Guests" ë¡œ ë°”ê¾¸ê¸°
+
+7. list í´ë¦­í•˜ë©´ detail í¼ì³ì§
 
 
-7. list Å¬¸¯ÇÏ¸é detail ÆîÃÄÁü
+9. Social Media ë°˜ì˜
+10. ì˜ˆì•½ ì™„ë£Œ í›„ ì´ë©”ì¼ë¡œ confirmation ì „ì†¡
 
 
-8. Book a Tour -> Client-Reservation
-   More Info -> section 5 ÀÌµ¿ Manager¿¡ Àü´Ş
-
-
-9. Social Media ¹İ¿µ
-	
-
-10. ¿¹¾à ¿Ï·á ÈÄ ÀÌ¸ŞÀÏ·Î confirmation Àü¼Û
-
-
-
+---------------------------------------------------------------------------------------------------------------
+3. book í´ë¦­í•˜ë©´ "Client-Reservation"ìœ¼ë¡œ ë„˜ì–´ê° ->client-reservation ì—ì„œ booking page ë¡œ ì´ë¦„ ë°”ê¿ˆ
+4. Get app ì‚­ì œ (0) -> book button change, href booking page
+8. Book a Tour -> booking page
+   More Info -> section 4ì´ë™    
