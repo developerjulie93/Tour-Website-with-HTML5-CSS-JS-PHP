@@ -32,14 +32,21 @@ nav ul li a{
 	font-size: 18px;
 }
 .left{
-	width: 78%;
+	width: 77%;
 	height: inherit;
 	float: left;
 }
 .right{
-	width: 22%;
+	width: 23%;
 	height: inherit;
 	float: right;
+}
+.right .right_btns{
+	width: 90px;
+	height: auto;
+	line-height: 20px;
+	display: inline-block;
+
 }
 #logo{
 	width: 150px;
@@ -49,16 +56,21 @@ nav ul li a{
 }
 #right1{
 	color: rgb(34,173,188);
-	outline: 2px solid rgb(34,173,188);
-	padding: 10px 23px;
+	border: 2px solid rgb(34,173,188);
+	padding: 5px;
 	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
 }
 #right2{
 	color: rgb(255,255,255);
-	outline: 3px solid rgb(34,173,188);
-	padding: 10px 13px;
+	border: 3px solid rgb(34,173,188);
+	padding: 5px;
 	background-color: rgb(34,173,188);
 	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+
 }
 .wrapper{
 	width: 1000px;
