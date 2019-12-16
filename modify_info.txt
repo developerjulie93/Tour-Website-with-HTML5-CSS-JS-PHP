@@ -1,0 +1,27 @@
+<Client-Main>
+1. navigation을 누르면 section2로 이동하여 
+   show "detail + book button" 
+2. 형식 : info + duration + price
+   duration을 화살표를 눌러 바꾸면 가격도 같이 바뀜
+3. book 클릭하면 "Client-Reservation"으로 넘어감
+4. Get app 삭제
+5. Contact us 누르면 section 5로 이동하여
+   Manager에 전달
+   "Name + E-mail + Description"로 바꾸기
+6. 검색창 -> "Tours + Date + Guests" 로 바꾸기
+
+
+7. list 클릭하면 detail 펼쳐짐
+
+
+8. Book a Tour -> Client-Reservation
+   More Info -> section 5 이동 Manager에 전달
+
+
+9. Social Media 반영
+	
+
+10. 예약 완료 후 이메일로 confirmation 전송
+
+
+
