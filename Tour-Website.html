@@ -73,6 +73,23 @@
 					<h2 style="color: rgb(255,206,0);">$25.00</h2>
 				</div>
 			</div>
+			<div class="panels">
+				<div class="panel">
+					<div class="panel_hour">
+						<h5>Boat 1 hour</h5>
+						<h5>Boat 2 hour</h5>
+						<h5>Boat 3 hour</h5>
+					</div>
+					<div class="panel_price">
+						<h5>$25</h5>
+						<h5>$30</h5>
+						<h5>$35</h5>
+					</div>
+					<div class="panel_book">
+						<button class="btn">Book</button>
+					</div>
+				</div>
+			</div>
 			<div class="ticket">
 				<div class="icons" id="bike">
 					<i class="fas fa-bicycle"></i>
@@ -83,6 +100,23 @@
 				</div>
 				<div class="price">
 					<h2 style="color: rgb(255,206,0);">$15.00</h2>
+				</div>
+			</div>
+			<div class="panels">
+				<div class="panel">
+					<div class="panel_hour">
+						<h5>Bike 1 hour</h5>
+						<h5>Bike 3 hour</h5>
+						<h5>Bike 5 hour</h5>
+					</div>
+					<div class="panel_price">
+						<h5>$15</h5>
+						<h5>$25</h5>
+						<h5>$35</h5>
+					</div>
+					<div class="panel_book">
+						<button class="btn">Book</button>
+					</div>
 				</div>
 			</div>
 			<div class="ticket">
@@ -97,6 +131,19 @@
 					<h2 style="color: rgb(255,206,0);">$25.00</h2>
 				</div>
 			</div>
+			<div class="panels">
+				<div class="panel">
+					<div class="panel_hour" style="padding: 10px;">
+						<h5>Cable 1 hour</h5>
+					</div>
+					<div class="panel_price"style="padding: 10px;">
+						<h5>$25</h5>
+					</div>
+					<div class="panel_book">
+						<button class="btn">Book</button>
+					</div>
+				</div>
+			</div>
 			<div class="ticket">
 				<div class="icons" id="car">
 					<i class="fas fa-car-side"></i>
@@ -107,6 +154,21 @@
 				</div>
 				<div class="price">
 					<h2 style="color: rgb(255,206,0);">$85.00</h2>
+				</div>
+			</div>
+			<div class="panels">
+				<div class="panel">
+					<div class="panel_hour">
+						<h5>Panoramic 1 hour</h5>
+						<h5>Panoramic 3 hour</h5>
+					</div>
+					<div class="panel_price">
+						<h5>$45</h5>
+						<h5>$85</h5>
+					</div>
+					<div class="panel_book">
+						<button class="btn">Book</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -219,5 +281,22 @@
 			</nav>
 		</footer>
 	</div>
+
+<script type="text/javascript">
+	var acc = document.getElementsByClassName("ticket");
+	var i;
+
+	for(i=0; i<acc.length; i++){
+		acc[i].addEventListener("click", function(){
+			var panels = this.nextElementSibling;
+			if(panels.style.maxHeight){
+				panels.style.maxHeight = null;
+			}
+			else{
+				panels.style.maxHeight = panels.scrollHeight + "px";
+			}
+		});
+	}
+</script>
 </body>
 </html>
