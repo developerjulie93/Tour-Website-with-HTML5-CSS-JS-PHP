@@ -5,6 +5,9 @@ body{
 	marign:0;
 	padding:0;
 }
+a{
+	text-decoration: none;
+}
 .section1{
 	width: 1500px;
 	height: 720px;
@@ -136,6 +139,7 @@ h1{
 	margin-left: 30px;
 	border: 1px solid rgb(34,173,188);
 	font-weight: bold;
+	cursor: pointer;
 }
 .search:hover{
 	background-color: rgb(255,255,255);
@@ -170,13 +174,14 @@ h1{
 .tickets{
 	width: 640px;
 	height: 450px;
+	cursor: pointer;
 }
 .ticket{
 	width: 100%;
 	height: 95px;
 	background-color: #fff;
-	margin-bottom: 25px;
 	display: flex;
+	cursor: pointer;
 }
 .icons{
 	width: 15%;
@@ -184,7 +189,6 @@ h1{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 }
 #boat{
 	color: rgb(3,83,136);
@@ -215,7 +219,50 @@ h1{
 	border-left-style: dotted;
 	border-width: 5px;
 	border-color: rgb(183,203,215);
-
+}
+.panels{
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 1s ease-out;
+}
+.panel{
+	width: 100%;
+	height: auto;
+	background-color: rgb(224,224,224);
+	margin-bottom: 25px;
+	display: flex;
+	font-family: 'Roboto', sans-serif;
+}
+.panel h5{
+	margin: 0;
+	line-height: 25px;
+}
+.panel_hour{
+	width: 50%;
+	justify-content: center;
+	text-align: center;
+}
+.panel_price{
+	width: 30%;
+	justify-content: center;
+	text-align: center;
+}
+.panel_book{
+	width: 20%;
+}
+.panel_book .btn{
+	margin: 15px auto;
+	width: 70px;
+	height: 50%;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	background-color: rgb(34,173,188);
+	border-radius: 5%;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
 }
 .section3{
 	width: 1500px;
