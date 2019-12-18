@@ -73,6 +73,23 @@
 					<h2 style="color: rgb(255,206,0);">$25.00</h2>
 				</div>
 			</div>
+			<div class="panels">
+				<div class="panel">
+					<div class="panel_hour">
+						<h5>Boat 1 hour</h5>
+						<h5>Boat 2 hour</h5>
+						<h5>Boat 3 hour</h5>
+					</div>
+					<div class="panel_price">
+						<h5>$25</h5>
+						<h5>$30</h5>
+						<h5>$35</h5>
+					</div>
+					<div class="panel_book">
+						<a href="http://localhost/html/BookingPage.html"><button class="btn">Book</button></a>
+					</div>
+				</div>
+			</div>
 			<div class="ticket">
 				<div class="icons" id="bike">
 					<i class="fas fa-bicycle"></i>
@@ -83,6 +100,23 @@
 				</div>
 				<div class="price">
 					<h2 style="color: rgb(255,206,0);">$15.00</h2>
+				</div>
+			</div>
+			<div class="panels">
+				<div class="panel">
+					<div class="panel_hour">
+						<h5>Bike 1 hour</h5>
+						<h5>Bike 3 hour</h5>
+						<h5>Bike 5 hour</h5>
+					</div>
+					<div class="panel_price">
+						<h5>$15</h5>
+						<h5>$25</h5>
+						<h5>$35</h5>
+					</div>
+					<div class="panel_book">
+						<a href="http://localhost/html/BookingPage.html"><button class="btn">Book</button></a>
+					</div>
 				</div>
 			</div>
 			<div class="ticket">
@@ -97,6 +131,19 @@
 					<h2 style="color: rgb(255,206,0);">$25.00</h2>
 				</div>
 			</div>
+			<div class="panels">
+				<div class="panel">
+					<div class="panel_hour" style="padding: 10px;">
+						<h5>Cable 1 hour</h5>
+					</div>
+					<div class="panel_price"style="padding: 10px;">
+						<h5>$25</h5>
+					</div>
+					<div class="panel_book">
+						<a href="http://localhost/html/BookingPage.html"><button class="btn">Book</button></a>
+					</div>
+				</div>
+			</div>
 			<div class="ticket">
 				<div class="icons" id="car">
 					<i class="fas fa-car-side"></i>
@@ -107,6 +154,21 @@
 				</div>
 				<div class="price">
 					<h2 style="color: rgb(255,206,0);">$85.00</h2>
+				</div>
+			</div>
+			<div class="panels">
+				<div class="panel">
+					<div class="panel_hour">
+						<h5>Panoramic 1 hour</h5>
+						<h5>Panoramic 3 hour</h5>
+					</div>
+					<div class="panel_price">
+						<h5>$45</h5>
+						<h5>$85</h5>
+					</div>
+					<div class="panel_book">
+						<a href="http://localhost/html/BookingPage.html"><button class="btn">Book</button></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -123,13 +185,13 @@
 				<p style="color: rgb(255,255,255);">you can enjoy a free beer or soda at the Reffen bars.</p>
 			</div>
 			<div>
-				<div class="btns" id="btn_book">Book a Tour</div>
-				<div class="btns" id="btn_info">More Info</div>
+				<a href="http://localhost/html/BookingPage.html"><div class="btns" id="btn_book">Book a Tour</div></a>
+				<a href="http://localhost/html/TourPage.php#MoreInfo"><div class="btns" id="btn_info">More Info</div></a>
 			</div>
 		</div>
 	</div>
 	<div class="section4">
-		<div class="wrapper4">
+		<div class="wrapper4" id="MoreInfo">
 		<div class="container">
 			<i class="far fa-compass iconCompass"></i>
 			<h1 style="font-size:32px; color: rgb(28,30,60);">
@@ -178,10 +240,10 @@
 					<p>Name</p>
 				</div>
 				<div class="input">
-					<p>Phone</p>
+					<p>E-mail</p>
 				</div>
 				<div class="input">
-					<p>E-mail</p>
+					<p>Description</p>
 				</div>
 			</div>
 			<div id="send">
@@ -219,5 +281,21 @@
 			</nav>
 		</footer>
 	</div>
+<script type="text/javascript">
+	var acc = document.getElementsByClassName("ticket");
+	var i;
+
+	for(i=0; i<acc.length; i++){
+		acc[i].addEventListener("click", function(){
+			var panels = this.nextElementSibling;
+			if(panels.style.maxHeight){
+				panels.style.maxHeight = null;
+			}
+			else{
+				panels.style.maxHeight = panels.scrollHeight + "px";
+			}
+		});
+	}
+</script>
 </body>
 </html>
