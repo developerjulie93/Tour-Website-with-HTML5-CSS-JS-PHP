@@ -43,9 +43,32 @@
 
 		<div class="search_box">
 			<div class="box">
-				<div id="box1">Choose Location</div>
-				<div id="box2">Date</div>
-				<div id="box3">Guests</div>
+				<div id="box1">Choose Tours
+					<div class="icon_down">
+					<i class="fas fa-sort-down"></i>
+				</div>
+				<div class="dropdown-content">
+					<div class="row">
+						<div class="col"><h3>Boat</h3></div>
+						<div class="col"><h3>Bike</h3></div>
+						<div class="col"><h3>Cable Car</h3></div>
+						<div class="col"><h3>Panoramic</h3></div>
+						<div class="dropdown-btn">
+							<h3>Done</h3>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div id="box2">Date
+				<div class="icon_down">
+					<i class="fas fa-sort-down"></i>
+				</div>
+				</div>
+				<div id="box3">Guests
+				<div class="icon_down">
+					<i class="fas fa-sort-down"></i>
+				</div>
+				</div>
 			</div>
 			<div class="search">
 				search
@@ -106,8 +129,8 @@
 				<div class="panel">
 					<div class="panel_hour">
 						<h5>Bike 1 hour</h5>
+						<h5>Bike 2 hour</h5>
 						<h5>Bike 3 hour</h5>
-						<h5>Bike 5 hour</h5>
 					</div>
 					<div class="panel_price">
 						<h5>$15</h5>
@@ -134,7 +157,7 @@
 			<div class="panels">
 				<div class="panel">
 					<div class="panel_hour" style="padding: 10px;">
-						<h5>Cable 1 hour</h5>
+						<h5>Cable car 1 hour</h5>
 					</div>
 					<div class="panel_price"style="padding: 10px;">
 						<h5>$25</h5>
@@ -237,13 +260,13 @@
 			</div>
 			<div class="input_container">
 				<div class="input">
-					<p>Name</p>
+					<input type="text" name="name" value="Name"  onclick="this.value='';" onblur="if(this.value=='') this.value = 'Name'" >
 				</div>
 				<div class="input">
-					<p>E-mail</p>
+					<input type="text" name="email" value="E-mail" onclick="this.value ='';" onblur="if(this.value=='') this.value = 'E-mail'">
 				</div>
 				<div class="input">
-					<p>Description</p>
+					<input type="text" name="description" value="What is your question?" onclick="this.value ='';" onblur="if(this.value=='') this.value = 'What is your question?'">
 				</div>
 			</div>
 			<div id="send">
@@ -297,6 +320,17 @@
 			}
 		});
 	}
+
+	var col = document.getElementsByClassName("col");
+
+	for(var j=0; j<col.length; j++){
+		col[j].addEventListener("click", function(){
+			col[j].style.backgroundColor = "rgb(238,238,238)";
+
+		});
+	}
+
+
 </script>
 </body>
 </html>
