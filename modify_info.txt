@@ -7,30 +7,42 @@ Section5 => Contact Us
 Section6 => Navigation with Social Media
 
 
+<Manager-Main>
+Section1 => Customer Request
+Section2 => Customer Information
+Section3 => Reservation Graph
+Section4 => Making Event Form
+
+
+<Booking-Main>
+Section1 => 
+Section2 => Available Tours Search
+Section3 => Customer Booking Information Form
 ---------------------------------------------------------------------------------------------------------------
-
-
-
-
-5. Contact us 누르면 section 5로 이동하여
-   Manager에 전달
-   "Name + E-mail + Description"로 바꾸기
-6. 검색창 -> "Tours + Date + Guests" 로 바꾸기
-
-
-
 
 9. Social Media 반영
 10. 예약 완료 후 이메일로 confirmation 전송
+11. 검색창을 클릭하면 그에 해당하는 하단 메뉴가 보여짐
+    Done을 클릭하면 검색창에 반영되고 search벼튼을 누르면 저장된 정보들이 bookingpage에 전달됨
+12. 검색창에 반영된 input 정보들을 db에 저장
+13. db에 저장된 Request 정보들을 읽어와 갯수만큼 자동으로 request 창을 만들고 띄워줌
 
 
 ---------------------------------------------------------------------------------------------------------------
+
 1. navigation을 누르면 section2로 이동하여 
    show "detail + book button"  ->click eventlistener 지정, href booking page
    2. 형식 : info + duration + price
    duration을 화살표를 눌러 바꾸면 가격도 같이 바뀜 -> 화살표 눌러서 변화시키는 방식이 아니라 패널 펼치기 방식으로 바꿈
 3. book 클릭하면 "Client-Reservation"으로 넘어감 ->client-reservation 에서 booking page 로 이름 바꿈
 4. Get app 삭제 (0) -> book button change, href booking page
+
+5. Contact us 누르면 section 5로 이동하여
+   Manager에 전달
+   "Name + E-mail + Description"로 바꾸기 => input 을 받으면 request_info db에 저장한 후 ManagerPage Customer Request란에 보여줌
+                                          => Request를 해결 했는지 않했는지에 따라 Clear/Cancle 버튼을 누르고 배경색에 따라 쉽게 구분 가능
+
+6. 검색창 -> "Tours + Date + Guests" 로 바꾸기
 7. list 클릭하면 detail 펼쳐짐 ->패널 펼치기 
 8. Book a Tour -> booking page
    More Info -> section 4이동    
