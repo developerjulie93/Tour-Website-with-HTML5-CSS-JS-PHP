@@ -1,5 +1,6 @@
 *{
 	font-family: sans-serif;
+	box-sizing: border-box;
 }
 body{
 	marign:0;
@@ -45,7 +46,7 @@ nav ul li a{
 	float: right;
 }
 .right .right_btns{
-	width: 90px;
+	width: 110px;
 	height: auto;
 	line-height: 20px;
 	display: inline-block;
@@ -97,7 +98,7 @@ h1{
 	width: 600px;
 	height: 40px;
 	margin: 70px auto;
-	background-color: #fff;
+	background-color: rgb(255,255,255);
 	display: flex;
 }
 .box{
@@ -108,8 +109,10 @@ h1{
 	line-height: 2.8;
 	color: rgb(150,148,147);
 	font-size: 12px;
-	margin-left: 20px;
+	margin-left: 10px;
+	cursor: pointer;
 }
+
 #box1{
 	width: 60%;
 	padding-left: 10px;
@@ -129,9 +132,52 @@ h1{
 	border: 1px solid rgb(238,238,238);
 	border-left: 1px dashed rgb(238,238,238);
 }
+.icon_down{
+	float: right;
+	width: 10px;
+	height: 10px;
+	color: rgb(150,148,147);
+	cursor: pointer;
+	padding-right: 10px;
+}
+.dropdown-content{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 180px;
+	box-shadow: 0px 0px 5px 0px rgba( 0,0,0,0.2);
+	cursor: pointer;
+}
+
+.row{
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid rgb(238,238,238);
+	background-color: rgb(255,255,255);
+}
+.col{
+	width: 100%;
+	margin: 0;
+	border: 1px solid rgb(238,238,238);
+}
+.col:hover{
+	background-color:rgb(238,238,238);
+}
+.dropdown-btn{
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	color: rgb(255,255,255);
+	text-align: center;
+	line-height: 0;
+	cursor: pointer;
+	border: 1px solid rgb(34,173,188);
+	background-color: rgb(34,173,188);
+}
 .search{
-	width: 18%;
-	height: 100%;
+	width: 108px;
+	height: 40px;
 	background-color: rgb(34,173,188);
 	color: #fff;
 	text-align: center;
@@ -279,7 +325,7 @@ h1{
 
 }
 .wrapper3 .btns{
-	width: 120px;
+	width: 140px;
 	height: auto;
 	line-height: 10px;
 	display: inline-block;
@@ -373,13 +419,15 @@ h1{
 .input{
 	width: 100%;
 	height: 40px;
-	border: 1px solid rgb(127,124,144);
 	margin-bottom: 20px;
 	color: rgb(127,124,144);
 	font-size: 14px;
 }
-.input p{
+.input input{
+	width: 100%;
+	height: 100%;
 	padding-left: 5px;
+	color: rgb(127,124,144);
 }
 #send{
 	margin-left: 150px;
@@ -389,8 +437,11 @@ h1{
 	width: 180px;
 	height: 50px;
 	color: rgb(255,255,255);
+	font-weight: bold;
+	font-size: 15px;
 	text-align: center;
 	line-height: 50px;
+	cursor: pointer;
 }
 .section6{
 	width: 1500px;
