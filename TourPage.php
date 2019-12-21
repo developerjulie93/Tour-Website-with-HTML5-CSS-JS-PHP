@@ -1,4 +1,8 @@
-
+<?php
+	$conn = mysqli_connect('localhost','root','111111');
+	mysqli_select_db($conn,'request_info');
+	$result = mysqli_query($conn, "SELECT * FROM contact_info");
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,13 +47,13 @@
 
 		<div class="search_box">
 			<div class="box">
-				<div id="box1">Choose Location</div>
+				<div id="box1">Choose Tours</div>
 				<div id="box2">Date</div>
 				<div id="box3">Guests</div>
 			</div>
-			<div class="search">
+			<a href="http://localhost/html/BookingPage.html"><div class="search">
 				search
-			</div>
+			</div></a>
 		</div>
 	</div>
 	</div>
@@ -106,8 +110,8 @@
 				<div class="panel">
 					<div class="panel_hour">
 						<h5>Bike 1 hour</h5>
+						<h5>Bike 2 hour</h5>
 						<h5>Bike 3 hour</h5>
-						<h5>Bike 5 hour</h5>
 					</div>
 					<div class="panel_price">
 						<h5>$15</h5>
@@ -134,7 +138,7 @@
 			<div class="panels">
 				<div class="panel">
 					<div class="panel_hour" style="padding: 10px;">
-						<h5>Cable 1 hour</h5>
+						<h5>Cable car 1 hour</h5>
 					</div>
 					<div class="panel_price"style="padding: 10px;">
 						<h5>$25</h5>
@@ -235,20 +239,22 @@
 				<p style="text-align: center; padding-top: 20px; color: rgb(127,124,144);">An easy and calm way to get to the other side of the harbor, and the</p>
 				<p style="text-align: center; color: rgb(127,124,144);">ticket you can enjoy a free beer or soda at the Granvile Island bars.</p>
 			</div>
+			<form action="ManagerPage.php" method="post">
 			<div class="input_container">
 				<div class="input">
-					<p>Name</p>
+					<input type="text" name="name" value="Name"  onclick="this.value='';" onblur="if(this.value=='') this.value = 'Name'" >
 				</div>
 				<div class="input">
-					<p>E-mail</p>
+					<input type="text" name="email" value="E-mail" onclick="this.value ='';" onblur="if(this.value=='') this.value = 'E-mail'">
 				</div>
 				<div class="input">
-					<p>Description</p>
+					<input type="text" name="description" value="What is your question?" onclick="this.value ='';" onblur="if(this.value=='') this.value = 'What is your question?'">
 				</div>
 			</div>
-			<div id="send">
-				Send Request
+			<div>
+				<input id="send" type="submit" name="submit" value="Send Request">
 			</div>
+			</form>
 		</div>
 	</div>
 	<div class="section6">
@@ -295,6 +301,17 @@
 				panels.style.maxHeight = panels.scrollHeight + "px";
 			}
 		});
+	}
+
+	var openwin;
+	var i;
+	function openPage(){
+		window.name = "tourForm";
+		openwin = window.open("ManagerPage.php","managerForm","width=500,height=500");
+	}
+	function setChildText(){
+		i = document.getElementById("name").value;
+		openwin.document.getElementById("mName").value = i;
 	}
 </script>
 </body>
