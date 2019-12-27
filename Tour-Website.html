@@ -2,8 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--Reference
+	<!--Reference : Client Page
 		https://dribbble.com/shots/5685400-Copenhagen-Tours-Page?utm_source=Clipboard_Shot&utm_campaign=outcrowd&utm_content=Copenhagen%20Tours%20Page&utm_medium=Social_Share-->
+	<!--Reference : Manager Page
+		http://demo.ninjateam.org/html/zeiss/light/-->
+	<!--Reference : Booking Page
+		https://preview.themeforest.net/item/cleaning-landing-page-template-cleanly-with-booking-page/full_screen_preview/21010503?_ga=2.65665902.1999862514.1577411358-652494175.1577411358-->
+
 
 	<title>TourPage</title>
 	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
@@ -42,32 +47,38 @@
 		<h1 id="f2">VANCOUVER</h1>
 
 		<div class="search_box">
-			<div class="box">
-				<div id="box1">Choose Tours
+			<div class="boxes">
+				<div id="box1" class="box" onclick="dropdown('tours',this)">Choose Tours
 					<div class="icon_down">
-					<i class="fas fa-sort-down"></i>
+					<i class="fas fa-sort-down"></i></div>
 				</div>
-				<div class="dropdown-content">
+				<div id="tours" class="dropdown-content">
 					<div class="row">
-						<div class="col"><h3>Boat</h3></div>
-						<div class="col"><h3>Bike</h3></div>
-						<div class="col"><h3>Cable Car</h3></div>
-						<div class="col"><h3>Panoramic</h3></div>
+						<div class="col" onclick="keepFocus(this)"><h3>Boat</h3></div>
+						<div class="col" onclick="keepFocus(this)"><h3>Bike</h3></div>
+						<div class="col" onclick="keepFocus(this)"><h3>Cable Car</h3></div>
+						<div class="col" onclick="keepFocus(this)"><h3>Panoramic</h3></div>
 						<div class="dropdown-btn">
 							<h3>Done</h3>
 						</div>
 					</div>
 				</div>
+
+				<div id="box2" class="box" onclick="dropdown('date',this)">Date
+					<div class="icon_down">
+						<i class="fas fa-sort-down"></i>
+					</div>
 				</div>
-				<div id="box2">Date
-				<div class="icon_down">
-					<i class="fas fa-sort-down"></i>
+				<div id="date" class="dropdown-content">
+					<div>Calendar</div>
 				</div>
+				<div id="box3" class="box" onclick="dropdown('guests',this)">Guests
+					<div class="icon_down">
+						<i class="fas fa-sort-down"></i>
+					</div>
 				</div>
-				<div id="box3">Guests
-				<div class="icon_down">
-					<i class="fas fa-sort-down"></i>
-				</div>
+				<div id="guests" class="dropdown-content">
+					<div>guests</div>
 				</div>
 			</div>
 			<div class="search">
@@ -321,16 +332,34 @@
 		});
 	}
 
-	var col = document.getElementsByClassName("col");
+	function keepFocus(elmnt) {
+	  var i, cols;
+	  var colors = 'rgb(238,238,238)';
+	  var box = document.getElementById("box1");
+	  cols = document.getElementsByClassName("col");
+	  for (i = 0; i < cols.length; i++) {
+	    cols[i].style.backgroundColor = 'rgb(255,255,255)';
+	  }
 
-	for(var j=0; j<col.length; j++){
-		col[j].addEventListener("click", function(){
-			col[j].style.backgroundColor = "rgb(238,238,238)";
+	  elmnt.style.backgroundColor = colors;
 
-		});
 	}
 
+	function dropdown(pageName,elmnt){
+		var i, content, boxes;
+		var pageName = document.getElementById(pageName);
+		boxes = document.getElementsByClassName("box");
+		content = document.getElementsByClassName("dropdown-content");
 
+		if(pageName.style.display ==="block"){
+			pageName.style.display = "none";
+		}else{
+			for(i=0; i<content.length; i++){
+				content[i].style.display = "none";
+			}
+			pageName.style.display = "block";
+		}
+	}
 </script>
 </body>
 </html>
