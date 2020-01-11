@@ -1,5 +1,5 @@
 # Tour-Website
-Tour Website for Vancouver using HTML5, CSS, JavaScript, PHP, MySQL and still working on it.
+Tour Website for Vancouver using HTML5, CSS, JavaScript, PHP, MySQL and still working on developing it
 
 
 #Language
